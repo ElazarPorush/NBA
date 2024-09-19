@@ -72,12 +72,7 @@ const CreateTitle = (): HTMLTableRowElement => {
     threePercentTH.textContent = "3P%"
     actionTH.textContent = "Action"
 
-    tr.appendChild(playerTH)
-    tr.appendChild(positionTH)
-    tr.appendChild(pointsTH)
-    tr.appendChild(twoPercentTH)
-    tr.appendChild(threePercentTH)
-    tr.appendChild(actionTH)
+    tr.append(playerTH, positionTH, pointsTH, twoPercentTH, threePercentTH, actionTH)
 
     return tr
 }
@@ -105,12 +100,7 @@ const CreatePlayer = (player: Player): HTMLTableRowElement => {
     btn.addEventListener("click", () => { addToMyTeam(player) })
     actionTD.appendChild(btn)
     
-    tr.appendChild(playerTD)
-    tr.appendChild(positionTD)
-    tr.appendChild(pointsTD)
-    tr.appendChild(twoPercentTD)
-    tr.appendChild(threePercentTD)
-    tr.appendChild(actionTD)
+    tr.append(playerTD, positionTD, pointsTD, twoPercentTD, threePercentTD, actionTD)
 
     return tr
 }
@@ -123,7 +113,7 @@ const addToMyTeam = (player: Player): void => {
             pointGuard.textContent = ''
             const pointGuardTitle: HTMLParagraphElement = document.createElement("p")!
             pointGuardTitle.style.color = "blue"
-            pointGuardTitle.textContent = "Point Guard"
+            pointGuardTitle.textContent = "Point Guard🏀"
             pointGuard.appendChild(pointGuardTitle)
             currentPosition = pointGuard
             break
@@ -131,7 +121,7 @@ const addToMyTeam = (player: Player): void => {
             shootingGuard.textContent = ''
             const shootingGuardTitle: HTMLParagraphElement = document.createElement("p")!
             shootingGuardTitle.style.color = "blue"
-            shootingGuardTitle.textContent = "Shooting Guard"
+            shootingGuardTitle.textContent = "Shooting Guard🏀"
             shootingGuard.appendChild(shootingGuardTitle)
             currentPosition = shootingGuard
             break
@@ -139,7 +129,7 @@ const addToMyTeam = (player: Player): void => {
             smallForward.textContent = ''
             const smallForwardTitle: HTMLParagraphElement = document.createElement("p")!
             smallForwardTitle.style.color = "blue"
-            smallForwardTitle.textContent = "Small Forward"
+            smallForwardTitle.textContent = "Small Forward🏀"
             smallForward.appendChild(smallForwardTitle)
             currentPosition = smallForward
             break
@@ -147,7 +137,7 @@ const addToMyTeam = (player: Player): void => {
             powerForward.textContent = ''
             const powerForwardTitle: HTMLParagraphElement = document.createElement("p")!
             powerForwardTitle.style.color = "blue"
-            powerForwardTitle.textContent = "Power Forward"
+            powerForwardTitle.textContent = "Power Forward🏀"
             powerForward.appendChild(powerForwardTitle)
             currentPosition = powerForward
             break
@@ -155,7 +145,7 @@ const addToMyTeam = (player: Player): void => {
             center.textContent = ''
             const centerTitle: HTMLParagraphElement = document.createElement("p")!
             centerTitle.style.color = "blue"
-            centerTitle.textContent = "Center"
+            centerTitle.textContent = "Center🏀"
             center.appendChild(centerTitle)
             currentPosition = center
             break
@@ -172,8 +162,5 @@ const addToMyTeam = (player: Player): void => {
     twp.textContent = `Two Precents : ${player.twoPercent.toString()}%`
     p.textContent = `Points : ${player.points.toString()}`
 
-    currentPosition.appendChild(name)
-    currentPosition.appendChild(thp)
-    currentPosition.appendChild(twp)
-    currentPosition.appendChild(p)
+    currentPosition.append(name, thp, twp, p)
 }

@@ -16,19 +16,38 @@
     <H1>My Fantasy Team</H1>
     <div class="myTeam">
         <div class="player">
-            <p style="color: blue;">Point Guard</p>
+            <div>
+                <h2 style="color: blue;">Point</h2>
+                <h2 style="color: blue;">Guard</h2>
+                <h2 style="font-size: xx-large;">🏀</h2>
+            </div>
         </div>
         <div class="player">
-            <p style="color: blue;">Shooting Guard</p>
+            <div>
+                <h2 style="color: blue;">Shooting</h2>
+                <h2 style="color: blue;">Guard</h2>
+                <h2 style="font-size: xx-large;">🏀</h2>
+            </div>
         </div>
         <div class="player">
-            <p style="color: blue;">Small Forward</p>
+            <div>
+                <h2 style="color: blue;">Small</h2>
+                <h2 style="color: blue;">Forward</h2>
+                <h2 style="font-size: xx-large;">🏀</h2>
+            </div>
         </div>
         <div class="player">
-            <p style="color: blue;">Power Forward</p>
+            <div>
+                <h2 style="color: blue;">Power</h2>
+                <h2 style="color: blue;">Forward</h2>
+                <h2 style="font-size: xx-large;">🏀</h2>
+            </div>
         </div>
         <div class="player">
-            <p style="color: blue;">Center</p>
+            <div>
+                <h2 style="color: blue;">Center</h2>
+                <h2 style="font-size: xx-large;">🏀</h2>
+            </div>
         </div>
     </div>
     <h1>NBA Player Search</h1>
@@ -41,11 +60,13 @@
                 <option value="PF">PF</option>
                 <option value="C">C</option>
             </select>
-            <input type="range" value="10000" id="points" min="0" max="20000" oninput="amountPoints.value=points.value+' points'">
+            <input type="range" value="10000" id="points" min="0" max="20000"
+                oninput="amountPoints.value=points.value+' points'">
             <output id="amountPoints" for="points"></output>
-            <input type="range" value="50" id="fg" min="0" max="100" oninput="amountFG.value=fg.value+' two percent'">
+            <input type="range" value="50" id="fg" min="0" max="100" oninput="amountFG.value=fg.value+'% two percent'">
             <output id="amountFG" for="fg"></output>
-            <input type="range" value="50" id="p3" min="0" max="100" oninput="amount3P.value=p3.value+' three percent'">
+            <input type="range" value="50" id="p3" min="0" max="100"
+                oninput="amount3P.value=p3.value+'% three percent'">
             <output id="amount3P" for="p3"></output>
             <p class="action" id="search">Search Player</p>
         </form>

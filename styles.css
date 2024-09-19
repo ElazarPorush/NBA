@@ -87,6 +87,12 @@ input, select {
     align-items: center;
 }
 
+#search:hover {
+    box-shadow: 0 0.5px 3px;
+    font-size: large;
+    /* background-color: #C9082A; */
+}
+
 table {
     width: 100%;
     border-collapse: collapse;

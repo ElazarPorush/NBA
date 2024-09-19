@@ -65,12 +65,7 @@ const CreateTitle = () => {
     twoPercentTH.textContent = "FG%";
     threePercentTH.textContent = "3P%";
     actionTH.textContent = "Action";
-    tr.appendChild(playerTH);
-    tr.appendChild(positionTH);
-    tr.appendChild(pointsTH);
-    tr.appendChild(twoPercentTH);
-    tr.appendChild(threePercentTH);
-    tr.appendChild(actionTH);
+    tr.append(playerTH, positionTH, pointsTH, twoPercentTH, threePercentTH, actionTH);
     return tr;
 };
 //create player to the table
@@ -93,12 +88,7 @@ const CreatePlayer = (player) => {
     btn.textContent = `Add ${firstName} to Current Team`;
     btn.addEventListener("click", () => { addToMyTeam(player); });
     actionTD.appendChild(btn);
-    tr.appendChild(playerTD);
-    tr.appendChild(positionTD);
-    tr.appendChild(pointsTD);
-    tr.appendChild(twoPercentTD);
-    tr.appendChild(threePercentTD);
-    tr.appendChild(actionTD);
+    tr.append(playerTD, positionTD, pointsTD, twoPercentTD, threePercentTD, actionTD);
     return tr;
 };
 //add player to my team
@@ -109,7 +99,7 @@ const addToMyTeam = (player) => {
             pointGuard.textContent = '';
             const pointGuardTitle = document.createElement("p");
             pointGuardTitle.style.color = "blue";
-            pointGuardTitle.textContent = "Point Guard";
+            pointGuardTitle.textContent = "Point Guard🏀";
             pointGuard.appendChild(pointGuardTitle);
             currentPosition = pointGuard;
             break;
@@ -117,7 +107,7 @@ const addToMyTeam = (player) => {
             shootingGuard.textContent = '';
             const shootingGuardTitle = document.createElement("p");
             shootingGuardTitle.style.color = "blue";
-            shootingGuardTitle.textContent = "Shooting Guard";
+            shootingGuardTitle.textContent = "Shooting Guard🏀";
             shootingGuard.appendChild(shootingGuardTitle);
             currentPosition = shootingGuard;
             break;
@@ -125,7 +115,7 @@ const addToMyTeam = (player) => {
             smallForward.textContent = '';
             const smallForwardTitle = document.createElement("p");
             smallForwardTitle.style.color = "blue";
-            smallForwardTitle.textContent = "Small Forward";
+            smallForwardTitle.textContent = "Small Forward🏀";
             smallForward.appendChild(smallForwardTitle);
             currentPosition = smallForward;
             break;
@@ -133,7 +123,7 @@ const addToMyTeam = (player) => {
             powerForward.textContent = '';
             const powerForwardTitle = document.createElement("p");
             powerForwardTitle.style.color = "blue";
-            powerForwardTitle.textContent = "Power Forward";
+            powerForwardTitle.textContent = "Power Forward🏀";
             powerForward.appendChild(powerForwardTitle);
             currentPosition = powerForward;
             break;
@@ -141,7 +131,7 @@ const addToMyTeam = (player) => {
             center.textContent = '';
             const centerTitle = document.createElement("p");
             centerTitle.style.color = "blue";
-            centerTitle.textContent = "Center";
+            centerTitle.textContent = "Center🏀";
             center.appendChild(centerTitle);
             currentPosition = center;
             break;
@@ -155,8 +145,5 @@ const addToMyTeam = (player) => {
     thp.textContent = `Three Precents : ${player.threePercent.toString()}%`;
     twp.textContent = `Two Precents : ${player.twoPercent.toString()}%`;
     p.textContent = `Points : ${player.points.toString()}`;
-    currentPosition.appendChild(name);
-    currentPosition.appendChild(thp);
-    currentPosition.appendChild(twp);
-    currentPosition.appendChild(p);
+    currentPosition.append(name, thp, twp, p);
 };
