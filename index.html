@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
+
 <body>
-    
+    <div class="title">
+        <h3>NBA FANTASY 2014-2024</h3>
+    </div>
+    <H1>My Fantasy Team</H1>
+    <div class="myTeam">
+        <div class="player">
+            <p style="color: blue;">Point Guard</p>
+        </div>
+        <div class="player">
+            <p style="color: blue;">Shooting Guard</p>
+        </div>
+        <div class="player">
+            <p style="color: blue;">Small Forward</p>
+        </div>
+        <div class="player">
+            <p style="color: blue;">Power Forward</p>
+        </div>
+        <div class="player">
+            <p style="color: blue;">Center</p>
+        </div>
+    </div>
+    <h1>NBA Player Search</h1>
+    <div class="content">
+        <form>
+            <select>
+                <option selected value="PG">PG</option>
+                <option value="SG">SG</option>
+                <option value="SF">SF</option>
+                <option value="PF">PF</option>
+                <option value="C">C</option>
+            </select>
+            <input type="range" value="10000" id="points" min="0" max="20000" oninput="amountPoints.value=points.value+' points'">
+            <output id="amountPoints" for="points"></output>
+            <input type="range" value="50" id="fg" min="0" max="100" oninput="amountFG.value=fg.value+' two percent'">
+            <output id="amountFG" for="fg"></output>
+            <input type="range" value="50" id="p3" min="0" max="100" oninput="amount3P.value=p3.value+' three percent'">
+            <output id="amount3P" for="p3"></output>
+            <button class="action" id="submit">Search Player</button>
+        </form>
+        <table>
+            <tr>
+                <th>Player</th>
+                <th>Position</th>
+                <th>Points</th>
+                <th>FG%</th>
+                <th>3P%</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>e</td>
+                <td>e</td>
+                <td>e</td>
+                <td>e</td>
+                <td>e</td>
+                <td><p class="action">button</p></td>
+            </tr>
+        </table>
+    </div>
 </body>
+
 </html>
